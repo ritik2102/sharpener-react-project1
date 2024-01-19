@@ -36,34 +36,36 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
-      {expenses.map((item, index) => (
+      {/* {expenses.map((item, index) => (
         <ExpenseItem title={item.title}
           date={item.date}
           amount={item.amount}
           LocationOfExpenditure={item.LocationOfExpenditure}>
         </ExpenseItem>
-      ))}
+      ))} */}
 
-      {/* <ExpenseItem title={expenses[0].title}
+      <ExpenseItem title={expenses[0].title}
         date={expenses[0].date}
         amount={expenses[0].amount}
-        LocationOfExpenditure={expenses[0].LocationOfExpenditure}>
-      </ExpenseItem>
+        LocationOfExpenditure={expenses[0].LocationOfExpenditure}
+      />
+
       <ExpenseItem title={expenses[1].title}
         date={expenses[1].date}
         amount={expenses[1].amount}
-        LocationOfExpenditure={expenses[1].LocationOfExpenditure}>
-      </ExpenseItem>
+        LocationOfExpenditure={expenses[1].LocationOfExpenditure}
+      />
+
       <ExpenseItem title={expenses[2].title}
         date={expenses[2].date}
         amount={expenses[2].amount}
-        LocationOfExpenditure={expenses[2].LocationOfExpenditure}>
-      </ExpenseItem>
+        LocationOfExpenditure={expenses[2].LocationOfExpenditure}
+      />
       <ExpenseItem title={expenses[3].title}
         date={expenses[3].date}
         amount={expenses[3].amount}
-        LocationOfExpenditure={expenses[3].LocationOfExpenditure}>
-      </ExpenseItem> */}
+        LocationOfExpenditure={expenses[3].LocationOfExpenditure}
+      />
 
     </div>
   );
