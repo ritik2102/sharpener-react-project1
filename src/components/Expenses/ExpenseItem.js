@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import ExpenseDate from './ExpenseDate';
 import ExpenseDetails from './ExpenseDetails';
 import Card from '../UI/Card';
@@ -9,14 +10,19 @@ function ExpenseItem(props) {
         // Call the callback function to delete the expense
         props.onDeleteExpense(props.id);
     };
+    const [amount,setAmount]=useState(props.amount);
+
+    const handleAmount =()=>{
+        setAmount('$100');
+    }
     
     return (
         <Card className='expense-item'>
             <ExpenseDate date={props.date} />
-            <ExpenseDetails amount={props.amount}
+            <ExpenseDetails amount={amount}
             location={props.LocationOfExpenditure}
             title={props.title}/>
-            <button onClick={()=> {console.log('Clicked!')}}>Change Title</button>
+            <button onClick={handleAmount}>Change Expense Value</button>
             <button onClick={handleDeleteExpense}>Delete Expense</button>
         </Card>
     );
