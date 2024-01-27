@@ -13,7 +13,7 @@ function ExpenseItem(props) {
     const [amount,setAmount]=useState(props.amount);
 
     const handleAmount =()=>{
-        setAmount('$100');
+        setAmount('100');
     }
     
     return (
