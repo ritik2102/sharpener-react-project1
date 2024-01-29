@@ -6,10 +6,10 @@ import './ExpenseItem.css';
 
 function ExpenseItem(props) {
     
-    const handleDeleteExpense = () => {
-        // Call the callback function to delete the expense
-        props.onDeleteExpense(props.id);
-    };
+    // const handleDeleteExpense = () => {
+    //     // Call the callback function to delete the expense
+    //     props.onDeleteExpense(props.id);
+    // };
     const [amount,setAmount]=useState(props.amount);
 
     const handleAmount =()=>{
@@ -23,7 +23,6 @@ function ExpenseItem(props) {
             location={props.LocationOfExpenditure}
             title={props.title}/>
             <button onClick={handleAmount}>Change Expense Value</button>
-            <button onClick={handleDeleteExpense}>Delete Expense</button>
         </Card>
     );
 }
